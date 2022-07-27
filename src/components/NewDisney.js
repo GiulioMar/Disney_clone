@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-const Recommends = (props) => {
+const NewDisney = (props) => {
   return (
     <Container>
-      <h4>Recommended for you</h4>
+      <h4>New to Disney +</h4>
       <Content>
         <Wrap>
           <Link to="/">
@@ -18,19 +18,19 @@ const Recommends = (props) => {
             <img src="" alt="" />
           </Link>
         </Wrap>
-
-        <Wrap>
-          <Link to="/">
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
-
-        <Wrap>
-          <Link to="/">
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
         
+        <Wrap>
+          <Link to="/">
+            <img src="" alt="" />
+          </Link>
+        </Wrap>
+
+        <Wrap>
+          <Link to="/">
+            <img src="" alt="" />
+          </Link>
+        </Wrap>
+
       </Content>
     </Container>
   );
@@ -84,4 +84,4 @@ box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
 
 `;
 
-export default Recommends;
+export default NewDisney;
