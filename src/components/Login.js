@@ -71,7 +71,7 @@ const CTA = styled.div`
 const CTALogoOne = styled.img`
 margin-bottom: 12px;
 max-width: 600px;
-min-height; 1px;
+min-height: 1px;
 display: block;
 width:100%;
 `;
