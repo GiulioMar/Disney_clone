@@ -8,11 +8,12 @@ import {
   setSignOutState,
   setUserLoginDetails,
 } from "../features/user/userSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Header = (props) => {
   const dispatch = useDispatch();
   const history = useNavigate();
+
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
@@ -20,7 +21,7 @@ const Header = (props) => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         setUser(user);
-        history.push("/home");
+        history("/home");
       }
     });
   }, [userName]);
@@ -40,24 +41,24 @@ const Header = (props) => {
         .signOut()
         .then(() => {
           dispatch(setSignOutState());
-          history.push("/");
+          history("/");
         })
         .catch((err) => alert(err.message));
     }
   };
-    const setUser = (user) => {
-      dispatch(
-        setUserLoginDetails({
-          name: user.displayName,
-          email: user.email,
-          photo: user.photoURL,
-        })
-      );
-    };
-  
+  const setUser = (user) => {
+    dispatch(
+      setUserLoginDetails({
+        name: user.displayName,
+        email: user.email,
+        photo: user.photoURL,
+      })
+    );
+  };
+
   return (
     <Nav>
-      <Logo>
+      <Logo >
         <img src="/images/logo (2).svg" alt="Disney" />
       </Logo>
       {!userName ? (

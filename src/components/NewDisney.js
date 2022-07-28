@@ -18,12 +18,6 @@ const NewDisney = (props) => {
             <img src="" alt="" />
           </Link>
         </Wrap>
-        
-        <Wrap>
-          <Link to="/">
-            <img src="" alt="" />
-          </Link>
-        </Wrap>
 
         <Wrap>
           <Link to="/">
@@ -31,6 +25,11 @@ const NewDisney = (props) => {
           </Link>
         </Wrap>
 
+        <Wrap>
+          <Link to="/">
+            <img src="" alt="" />
+          </Link>
+        </Wrap>
       </Content>
     </Container>
   );
@@ -56,7 +55,7 @@ padding-top: 56.25%,
 border-radius: 10px;
 box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    cursor:pointer;
+    cursor: pointer;
     overflow: hidden;
     position: relative;
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
